@@ -79,9 +79,11 @@ function compileMML(err, data) {
             } else {
                 if (!options.benchmark) {
                     console.log(output);
+                    process.exit(0);
                 } else {
                     var duration = (+new Date) - start;
                     console.log('TOTAL: ' + (duration) + 'ms');
+                    process.exit(0);
                 }
             }
         });
